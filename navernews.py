@@ -31,6 +31,8 @@ class NaverNews:
         # print('[*] content:', content)
         try:
             content.find('h4', {'class': 'blind'}).decompose()
+        except: pass
+        try:
             content.find('script').decompose()
         except: pass
         result = {
