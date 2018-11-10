@@ -24,13 +24,15 @@ class NaverNews:
     def getcontent(self, URL, as_json=False):
         if type(URL) == int:
             URL = self.list[URL]['src']
-        # print('[*] URL:', URL)
+        print('[*] URL:', URL)
         html = requests.get(URL).text 
         soup = BeautifulSoup(html, 'html.parser')
         content = soup.find(id='articleBodyContents')
         # print('[*] content:', content)
-        content.find('h4', {'class': 'blind'}).decompose()
-        content.find('script').decompose()
+        try:
+            content.find('h4', {'class': 'blind'}).decompose()
+            content.find('script').decompose()
+        except: pass
         result = {
             'title': soup.find(id='articleTitle').text,
             'src': URL,
