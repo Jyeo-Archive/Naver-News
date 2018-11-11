@@ -1,0 +1,25 @@
+{
+  "name": "naver-news",
+  "version": "1.0.0",
+  "description": "",
+  "main": "navernews.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junhoyeo/Naver-News.git"
+  },
+  "author": "JunhoYeo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/junhoyeo/Naver-News/issues"
+  },
+  "homepage": "https://github.com/junhoyeo/Naver-News#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "iconv-lite": "^0.4.24",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
